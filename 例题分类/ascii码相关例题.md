@@ -11,4 +11,46 @@
 4. 了解各个进制的字符表示: 2进制 0b开头;  8进制 0o开头; 10进制 0d开头; 16进制 0x开头 (可以省略0, 或者会将0替换为\)
 
 了解完这些后, 便能解这道题了
+
+考察点: 如何进行2进制转换为ascii码
+
 ![基础例题答案](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E5%9F%BA%E7%A1%80%E4%BE%8B%E9%A2%981%E7%AD%94%E6%A1%88.png)
+
+
+### 基础例题2
+![基础例题2](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E5%9F%BA%E7%A1%80%E4%BE%8B%E9%A2%982.png)
+
+考察点: 如何进行2,8,10,16进制转换为ascii码
+
+![基础例题2答案](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E5%9F%BA%E7%A1%80%E4%BE%8B%E9%A2%982%E8%A7%A3%E7%AD%94.png)
+
+
+### 基础例题3
+![基础例题3](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E5%9F%BA%E7%A1%80%E4%BE%8B%E9%A2%983.png)
+
+考察点: 
+1. 已知ascii是7位二进制数, 最高位为0这个知识点.
+2. 字符范围基本为0-9 a-f, 则简单判断为16进制
+3. 变化点: 把两个16进制字符转化为10进制后发现, 字符范围超过了 ascii可见范围的32~127, 打印二进制后可发现最高位全部被置1
+![基础例题3分析](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E5%9F%BA%E7%A1%80%E4%BE%8B%E9%A2%983%E5%88%86%E6%9E%90.png)
+4. 因此试探性的主动把最高位的1转换为0, 即主动扣减128
+
+![基础例题3答案](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E5%9F%BA%E7%A1%80%E4%BE%8B%E9%A2%983%E4%B8%BB%E5%8A%A8%E6%89%A3%E5%87%8F128.png)
+
+
+### 基础例题4
+![基础例题4](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/js%E9%A2%98%E7%9B%AE.png)
+![基础例题4js](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/js2%E9%A2%98%E7%9B%AE.png)
+
+考察点: 
+1. 分析能力: 本身题目名称为simple_js, 所以需要主动去看js的代码, 但是代码中dechiffre()函数明细十分复杂不像是题目说的简单类型
+2. 找到函数的调用处: 一个为用户侧的主动输入, 一个是图片蓝色处的主动硬编码的地方, 因此从这串字符中找突破口
+3. 从前置知识点可知 '\x35' 属于16进制编码的一类, 因此作为16进行编码进行解答
+4. '\x35' 这样的编码, 可以在python中直接由字符串转换为10进制的数值类型
+
+![基础例题4](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/js%E7%AD%94%E6%A1%88.png)
+
+
+### 进阶例题1
+
+
