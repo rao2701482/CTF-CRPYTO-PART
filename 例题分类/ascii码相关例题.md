@@ -1,6 +1,6 @@
 ### 基础例题1
 
-![基础例题1]([https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/1.png](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E5%9F%BA%E7%A1%80%E4%BE%8B%E9%A2%981.png))
+![基础例题1](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E5%9F%BA%E7%A1%80%E4%BE%8B%E9%A2%981.png)
 
 这是最基本的题型, 考察如何从二进制中获取目标的flag
 
