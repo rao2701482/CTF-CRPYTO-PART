@@ -54,3 +54,37 @@
 ![反复解码](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E5%8F%8D%E5%A4%8Dbase64%E8%A7%A3%E7%A0%81unicode%E8%A7%A3%E7%A0%81ascii%E8%A7%A3%E7%A0%81.png)
 
 => 就是按照字符特征进行反复解码
+
+## 例题4
+
+题目给出: exe文件
+=> linux: file a.exe 分析文件类型为文本类型
+=> 获得文本中的base64编码值(根据题目含义转化为图片)
+=> 在线转换 or 放浏览器地址栏里 or <img src="xx"> => 二维码扫描软件(QR search) 扫码后获得结果
+
+## 例题5
+
+考察点:
+1. 打开源码看内容
+
+![源码](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/js.png)
+=> 得到提示: 说是要把我找到的内容作为margin的参数以post的方式提交到服务后台
+
+2. 看响应头里是否有一些提示
+![响应](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E4%BE%8B%E9%A2%981%E5%93%8D%E5%BA%94%E5%A4%B4.png)
+=> 得到提示是flag: xxxxxx  看起来像base64编码
+
+3. 提取编码作为结果
+![提取](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/python%E8%84%9A%E6%9C%AC.png)
+=> 这边有个小坑: 提取完的结果还需要进行一次base64解码
+
+4. 我们发现每一次请求的响应头里的flag都不一样, 结合题目提示: 速度要快
+=> 推理需要进行会话控制
+![结果](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/python%E8%84%9A%E6%9C%AC2.png)
+
+
+
+
+
+
+
