@@ -17,3 +17,40 @@
 
 ## linux和python进行base64编解码的方式: 
 ![编码方式](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base64%E7%BC%96%E8%A7%A3%E7%A0%81.png)
+
+-----
+
+## 例题1
+
+![base64例题1](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base64%E4%BE%8B%E9%A2%981.png)
+
+考察点:
+考量字符特征: 最大为7. 联想8进制
+=> 解码完后是base64的特征: 字符 + 长度
+
+![base64例题1解答](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E5%85%AB%E8%BF%9B%E5%88%B6%E8%A7%A3%E6%9E%90%E5%AE%8C%E5%90%8E%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E6%9E%9C.png)
+
+## 例题2
+
+![base64例题2](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base64%E4%BE%8B%E9%A2%982.png)
+
+=> 当随意输入一个账号密码后, 弹出该错误提示, 根据经验, 说是该ip不行, 需要拦截并修改ip地址
+
+=> 那使用burp suite软件进行proxy拦截, 然后再邮件repeat后再repeater模块 : 补上x-forwarded-for: 127.0.0.1进行伪造客户端ip进行 登录
+
+![第二轮问题](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E7%AC%AC%E4%BA%8C%E8%BD%AE%E9%97%AE%E9%A2%98.png)
+
+=> 说密码不对, 则去源码中找找结果
+
+![源码中隐藏注释](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E6%BA%90%E7%A0%81%E4%B8%AD%E9%9A%90%E8%97%8F%E6%B3%A8%E9%87%8A.png)
+=> 然后base64解码获得结果test123
+
+=> 过关
+![结果](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E7%BB%93%E6%9E%9C.png)
+
+## 例题3
+
+![混合编码](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base64%E4%BE%8B%E9%A2%983%E6%B7%B7%E5%90%88%E7%BC%96%E7%A0%81.png)
+![反复解码](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E5%8F%8D%E5%A4%8Dbase64%E8%A7%A3%E7%A0%81unicode%E8%A7%A3%E7%A0%81ascii%E8%A7%A3%E7%A0%81.png)
+
+=> 就是按照字符特征进行反复解码
