@@ -98,3 +98,4 @@
 ## 例题7: 脑洞: 键盘加密
 ![简单例题](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E9%94%AE%E7%9B%98%E5%8A%A0%E5%AF%86.png)
 
+=> 沿着键盘顺序, 把目标字符包起来
