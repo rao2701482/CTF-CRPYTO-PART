@@ -113,3 +113,8 @@
 知识点: 为了避免以错误的编码方式解了正确编码方式的 字符串, 所以在解码的末尾使用 decode()进行把二进制解为字符, 如果能正确解为字符, 才认为进行了正确的解码
 
 ![base连续解码](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base64%E4%BB%BB%E6%84%8F%E8%A7%A3%E7%A0%81.png)
+
+## 例题10: 仿base64解码
+=> 对自定义编码 按码表解码后转为 base64编码 => 对脚本的最终结果进行base64解码
+
+![仿base64解码](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base%E7%BC%96%E7%A0%81.png)
