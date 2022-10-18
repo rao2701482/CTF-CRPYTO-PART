@@ -107,3 +107,9 @@
 2. 由于字符串很长, 我们一层层解码后发现: 是"b85 b64 b16"  ->  "b85 b64 b16"  -> "b85 b64 b16" 层层加密
 
 ![多层加密](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base%E8%BF%9E%E7%BB%AD%E8%A7%A3%E7%A0%81.png)
+
+## 例题9: base家族混合连续解码
+
+知识点: 为了避免以错误的编码方式解了正确编码方式的 字符串, 所以在解码的末尾使用 decode()进行把二进制解为字符, 如果能正确解为字符, 才认为进行了正确的解码
+
+![base连续解码](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base64%E4%BB%BB%E6%84%8F%E8%A7%A3%E7%A0%81.png)
