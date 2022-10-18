@@ -83,8 +83,18 @@
 ![结果](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/python%E8%84%9A%E6%9C%AC2.png)
 
 
+---
+*Base家族*
 
+![base家族特征](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base%E5%AE%B6%E6%97%8F.png)
 
+- base16可以认为就是16进制编码, 以后16进制就直接用base16进行解码了
+- base32可以观察是大写字节 + 没有01 和 89的字符串
+- base85, emmmm  好复杂的样子....兜底试试
 
+## 例题6: base32  base16解码
+![简单例题](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base3216.png)
 
+## 例题7: 脑洞: 键盘加密
+![简单例题](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E9%94%AE%E7%9B%98%E5%8A%A0%E5%AF%86.png)
 
