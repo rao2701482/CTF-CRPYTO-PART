@@ -118,3 +118,19 @@
 => 对自定义编码 按码表解码后转为 base64编码 => 对脚本的最终结果进行base64解码
 
 ![仿base64解码](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base%E7%BC%96%E7%A0%81.png)
+
+---
+
+base64编码:
+1. 3个字符 => 24位二进制数 =>分隔为4组6位二进制数 => 编码为4个base64编码字符
+2. 当只有一个字符时, 这个过程里的只有8位二进制数, 因此需要主动填充4位二进制数, 然后再补充等号
+3. 当只有两个字符时, 只有16个二进制数, 与18位相比却两个, 需要主动填充2位二进制数, 然后补充等号
+![编码1](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base64%E7%BC%96%E7%A0%811.png)
+![编码2](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/bsae64%E7%BC%96%E7%A0%812.png)
+
+base64解码:
+![看图](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E8%A7%A3%E7%A0%81%E4%B8%8E%E9%9A%90%E5%86%99.png)
+
+隐写:
+就是再base64解码的过程中, 在最后可以补的4个 or 2个二进制位做文章
+题目特征: 会给非常多的base64编码字符串, 然后从中提取隐写的二进制位, 拼接后得到最终的flag
