@@ -99,3 +99,11 @@
 ![简单例题](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/%E9%94%AE%E7%9B%98%E5%8A%A0%E5%AF%86.png)
 
 => 沿着键盘顺序, 把目标字符包起来
+
+## 例题8
+
+考察点:
+1. 分析字符规则, 发现是b85 b64 b16三类加密
+2. 由于字符串很长, 我们一层层解码后发现: 是"b85 b64 b16"  ->  "b85 b64 b16"  -> "b85 b64 b16" 层层加密
+
+![多层加密](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base%E8%BF%9E%E7%BB%AD%E8%A7%A3%E7%A0%81.png)
