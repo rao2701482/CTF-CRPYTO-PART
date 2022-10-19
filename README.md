@@ -12,7 +12,7 @@
 1. unicode: \u002c    
 (
 
-=> \U[Hex]  \U+[Hex] 
+=> \U[Hex]  \U+[Hex]   => 直接chr(int('002c', 16))解就好, 本身python3就是unicode编码
 
 => &$x[Hex]; &#[Dec];  => 放html打开
 )
