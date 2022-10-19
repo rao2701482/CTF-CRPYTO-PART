@@ -8,6 +8,10 @@
 ### 作用: 
 把非ascii字符都转化为ascii字符, 兼容旧的只能只有ascii的系统
 
+### 码表:
+![码表](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base64%E7%BC%96%E7%A0%81%E8%A1%A8.png)
+
+
 ## base64编码示例: 有自己的码表 
 ![base64编码示例](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base64%E7%BC%96%E7%A0%81%E7%A4%BA%E4%BE%8B.png)
 
