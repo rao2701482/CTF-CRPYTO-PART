@@ -151,6 +151,11 @@ str.zfill(6)
 
 ![base64隐写题目](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base64%E9%9A%90%E5%86%99%E9%A2%98%E7%9B%AE.png)
 
+=> 脚本在做什么: 判断一行字符串是否有等号, 如果有等号则代表最后非等号的字母是有进行二进制位填充的, 一个等号填充2位, 两个等号填充4位
+=> 我们先去除最后的等号, 然后对最后一个字母 从A-Za-z0-9+/这一串序列中, 去定位字符的index, 然后转化为二进制后, 提取补全的位数
+=> 把所有位数提取拼接完毕后, 可以进行二进制的解码为 ascii, 尝试得到最终的flag
+
+
 ![base64隐写答案](https://github.com/rao2701482/CTF-CRPYTO-PART/blob/main/%E5%9B%BE%E7%89%87%E8%B5%84%E6%96%99/base64%E9%9A%90%E5%86%99%E7%AD%94%E6%A1%88.png)
 
 
